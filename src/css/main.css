@@ -60,5 +60,40 @@
 
 /* Begin styling the report items here! */
 .reports {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  /* IE 11 */
+  -ms-margin: -30px;
+}
 
+.reports > * {
+  margin: 0;
+  /* IE 11 */
+  -ms-margin: 30px 0 0 30px;
+}
+
+.reports::after {
+  content: "";
+  width: 66%;
+}
+
+.reports_cover {
+  max-width: 100%;
+}
+
+.reports_item {
+  min-width: 150px;
+  max-width: 40%;
+  width: 30%;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .reports_item {
+    max-width: none;
+    width: 40%;
+  }
 }
